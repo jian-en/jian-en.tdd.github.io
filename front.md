@@ -1,3 +1,4 @@
+[原文链接](http://chimera.labs.oreilly.com/books/1234000000754)
 # 关于作者
 **Harry Percival**
 
