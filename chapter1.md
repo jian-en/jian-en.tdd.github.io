@@ -165,4 +165,40 @@ functional_tests.py.
 	$ echo "__pycache__" >> .gitignore
 	$ echo "*.pyc" >> .gitignore
 	
-现在
+好的，小结一下...（你会发现我经常使用**git status**以至于我开始使用缩写形式**git st**，但我没有告诉你怎么做的，我想让你自己发现Git的秘密）
+
+	$ git status
+	On branch master
+
+	Initial commit
+
+	Changes to be committed:
+	  (use "git rm --cached <file>..." to unstage)
+
+	        new file:   .gitignore
+	        new file:   functional_tests.py
+	        new file:   manage.py
+	        new file:   superlists/__init__.py
+	        new file:   superlists/settings.py
+	        new file:   superlists/urls.py
+	        new file:   superlists/wsgi.py
+
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	        modified:   .gitignore
+
+看起来不错，可以进行第一次提交了！
+
+	$ git add .gitignore
+	$ git commit
+当你打完**git commit**时，会跳出一个窗口让你写提交信息，我的界面看上去是这样的[^stackedit]：
+
+![git commit](http://orm-chimera-prod.s3.amazonaws.com/1234000000754/images/twdp_0103.png)
+
+> 如果你真的想再进一步认识Git，是时候把你的代码推送到基于云的代码托管服务中，比如说Github, BitBucket。如果你想在不同的电脑上都能够跟着学本书的内容，这个步骤很有用。我把这项任务留给你去探索，他们有很棒的文档，或者你也可以等到[第八章](http://chimera.labs.oreilly.com/books/1234000000754/ch08.html)，我们会用其中一个服务来做部署。
+
+这就是我们的VCS课程。恭喜大家，你们已经用Selenium写了一个功能性测试，你已经安装了Django，并用测试优先的TDD方式跑起来了程序。在进入[第二章](http://chimera.labs.oreilly.com/books/1234000000754/ch02.html)前，给自己加把劲！
+
+[^stackedit]: 不知道怎样使用vi编辑器？或者看到了有关账户认证的信息**git config --global user.username**很抓狂不知道怎么办？去看看[预备知识和准备工作](http://chimera.labs.oreilly.com/books/1234000000754/pr02.html)吧，你能在那里找到一些简单的技巧。
