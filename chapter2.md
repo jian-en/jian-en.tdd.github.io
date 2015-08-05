@@ -59,3 +59,19 @@ functional_tests.py
 > 它不仅没有意义，还很有问题，想想之后你更新了代码但是忘了修改注释，这会变得让人费解。最佳的方式是书写可读性强的代码，使用好的变量名称和方法名称，很好的组织它们这样你就不需要注释来解释你的代码在做什么。仅仅写一些来解释为什么这么做。
 > 还有其他注释很有用的地方，Django在文档中会产生很多注释告诉我们怎么使用它的API。当然啦，我们使用注释来解释FT中的用户故事，这样强迫我们在测试中写一个一致的故事，也确保我们经常从用户的角度进行测试。
 > 在这个领域还有很多有意思的话题，比如行为驱动开发(*Behavior Driven Development*)(参看[附录E](http://chimera.labs.oreilly.com/books/1234000000754/ape.html)), 测试DSL(*Domain Specific Language*)。这些已经超出了本书的范畴。
+
+你可能已经注意到了，除了写注释，我也更新了**assert**语句，现在检查“To－Do”而不是"Django"，这意味着，我们预计这是一个会失败的测试，我们先运行一下：
+
+首先，启动服务器：
+
+	$ python3 manage.py runserver
+
+其次在另一个shell中，运行测试：
+
+	$ python3 functional_tests.py
+	Traceback (most recent call last):
+	  File "functional_tests.py", line 10, in <module>
+	    assert 'To-Do' in browser.title
+	AssertionError
+
+这就是我们叫做的*预期的失败*，尽管和通过测试来比不那么好，但也确实是个好消息，至少它有一个正确的理由失败了，我们确信已经把测试写对了！
